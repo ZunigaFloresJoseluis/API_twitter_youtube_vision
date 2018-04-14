@@ -504,7 +504,7 @@ var _crear_video=function(id_video,tamano){
       video_return.setAttribute('type','text/html')
       video_return.setAttribute('width',"20%")
       video_return.setAttribute('height','25%')
-      video_return.setAttribute('src','http://www.youtube.com/embed/'+id_video+'?enablejsapi=1')
+      video_return.setAttribute('src','https://www.youtube.com/embed/'+id_video+'?enablejsapi=1')
       video_return.setAttribute('frameborder','0')
     return video_return;
 
@@ -647,7 +647,7 @@ var datos_vivienda=function(xhr,map,video,props){
  var _agregaMarcador = function(map,video,props,direccion){
         var marker=new google.maps.Marker({
             position: props.coords,
-            icon:'http://maps.google.com/mapfiles/kml/paddle/go.png',
+            icon:'https://maps.google.com/mapfiles/kml/paddle/go.png',
             map: map
         })
         var infowindow = new google.maps.InfoWindow({
