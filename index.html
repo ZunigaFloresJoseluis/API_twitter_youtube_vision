@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>API Vision - Youtube </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+     <link href="css/main.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+
+          <!-- new  scripts -->
+          
+          <!---  *******-->
+
+  </head>
+
+  <body id="page-top"  onload="archivo.agregar()">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top barralateral " id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Vision</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <!--- archivo-->
+
+             <div id="divInputLoad" class="input_file">
+    
+                <div id="divFileUpload">
+                    <input id="file-upload" type="file" accept="image/*" />
+                </div>
+              
+            </div>            
+
+          </li>
+        
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0" id="padre-cont-img">
+
+      <section class="titulo" id="about">
+        <div class="titulo">
+          <h1 class="mb-0">Vision
+            <span class="text-primary">& Youtube</span>
+          </h1>
+          <div class="subheading mb-5">zuniga flores jose luis ·
+            <a href="mailto:jose.luis.zuniga_nef@hotmail.com">jose.luis.zuniga_nef@hotmail.com</a>
+          </div>
+          <!-- segmento de botones-->
+         <div class="seg-boton" id="segmento-botn">
+            <h3>Botones</h3>
+            <input type="number" class="form-control" id="inp_number" aria-describedby="emailHelp" placeholder=" ingrese el limite de busqueda de videos">
+
+         </div>        
+
+
+    </div>
+  </section>
+  <section class="contenedorImg">
+   
+    <div id="file-preview-zone">
+      
+
+    </div>
+     
+       <div id="map"></div>
+
+  </section>
+<div class="container-all-acorder">
+<button class="accordion"><h2>Twitter API</h2></button>
+<div class="panel">
+ <section id="twiuts" class="container-twits">
+    <h2>twitter</h2>
+    <!--- msj desplegable -->
+    <div>
+    
+
+    </div>
+    
+
+
+    <!--  fin-->
+  </section>
+</div>
+
+<button class="accordion"><h2>Youtube API</h2></button>
+<div class="panel">
+   
+    <section id="videos" data-parallax="scroll" class="contenedor_videos">
+       
+              
+    </section>
+</div>
+
+</div>
+</div>
+
+        <!-- Latest compiled and minified CSS -->
+   
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type = "text / javascript" async src = "https://platform.twitter.com/widgets.js"> </ script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATTIUYuDBH47upxh-tEXDWWzsbMBHxx_o&callback=initMap"/>
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+    <script type="text/javascript" src="js/leer_archivo.js"></script>
+     <script type="text/javascript" src="js/peticiones.js"></script>
+     <script type="text/javascript" src="js/twits.js"></script>
+     <script type="text/javascript" src="js/menu.js"></script>
+     <script>
+         var map 
+        
+          function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+           map= new google.maps.Map(document.getElementById('map'), {
+              zoom: 4,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              
+              map: map
+            });
+          }
+    </script>
+     <script>
+
+var busqueda;
+var control=0;
+var json_inicial;
+function realizaProceso(valorCaja1){
+       busqueda=valorCaja1
+       control=0; //#  cambiar para  hacer peticones
+       if(document.getElementById('twiuts').children.length > 2){
+        twtt.eliminar('twiuts',2);
+       }
+        
+        var parametros = {
+                "valorCaja1" : twtt.replace_all(valorCaja1)
+             
+              
+        };
+       
+        $.ajax({
+                data:  parametros,
+                url:   'twitter.php',
+                type:  'post',
+                beforeSend: function () {
+                        $("#resultado").html("Procesando, espere por favor...");
+                },
+                success:  function (response) {
+                        var a=response;
+                      console.log(JSON.parse(a));
+                   
+                          json_inicial=JSON.parse(a);
+
+                    
+                        twtt.main(JSON.parse(a));
+
+
+                }
+        });
+
+
+        
+
+
+
+}
+function encontrar_geo(){
+       
+
+        var parametros = {
+                "valorCaja1" : busqueda
+             
+              
+        };
+       
+        $.ajax({
+                data:  parametros,
+                url:   'twitter.php',
+                type:  'post',
+                beforeSend: function () {
+                        $("#resultado").html("Procesando, espere por favor...");
+                },
+                success:  function (response) {
+                        var a=response;
+                      //console.log(JSON.parse(a));
+                      console.log('aqui')
+                      control++;
+                        twtt.busqueda(JSON.parse(a));
+
+
+                }
+        });
+
+
+        
+
+
+
+}
+</script>
+ 
+  </body>
+
+</html>

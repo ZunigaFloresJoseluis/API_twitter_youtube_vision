@@ -1,0 +1,141 @@
+.barralateral{
+	background: #336600;
+}
+
+.titulo{
+	position: relative;
+	top: 0%;
+	margin-left: 15%;
+	margin-top: 6%;
+}
+.contenedorImg{
+	width: 60%;
+	height: 100%
+
+}
+
+.imagen_muestra{
+  width: 400px;
+  height: 400px;
+ margin-left: 3%;
+ position: absolute;
+ top: 25%;
+ left: 15%;
+ margin-top: 5%;
+
+
+}
+
+.seg-boton{
+	position: relative;
+	left: 31%;
+	top: 0%;
+	/*background: red;*/
+	width: 400px;
+	height: 100%;
+}
+
+.boton_charact{
+	margin-top: 1px;
+	margin-left: 1px;
+}
+#inp_number{
+	float: left;
+	margin-top: 3px;
+}
+
+.contenedor_videos{
+	margin-top: 10%;
+	margin-left: 5%;
+	width: 70%;
+	height: 100%;
+	
+}
+
+ #map {
+        height: 300px;
+        width: 30%;
+        margin-top: 0;
+        margin-left: 100%
+  }
+ 
+
+.direccion{
+	margin-left: 80%;
+}
+
+.input_file{
+	margin-top: 50%;
+}
+
+blockquote.twitter-tweet {
+  display: inline-block;
+  padding: 16px;
+  margin: 10px 0;
+  max-width: 468px;
+  border: #ddd 1px solid;
+  border-top-color: #eee;
+  border-bottom-color: #bbb;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  font: bold 14px/18px Helvetica, Arial, sans-serif;
+  color: #000;
+}
+
+blockquote.twitter-tweet p {
+  font: normal 18px/24px Georgia, "Times New Roman", Palatino, serif;
+  margin: 0 5px 10px 0;
+}
+
+blockquote.twitter-tweet a[href^="https://twitter.com"] {
+  font-weight: normal;
+  color: #666;
+  font-size: 12px;
+}
+
+.container-twits{
+	margin-top: 0%;
+	margin-left: 10%;
+
+
+}
+/* ------------------> meni --------------->*/
+.container-all-acorder{
+	margin-top: 10%;
+}
+
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+
+.button_atras{
+  margin-left: 10%;
+}
+
+.button_siguiente{
+  margin-left: 50%;
+}

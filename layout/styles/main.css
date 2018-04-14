@@ -1,0 +1,34 @@
+
+
+.inicial{
+	float: left;
+	width:10% ;
+	height: 100%;
+
+}
+
+.tuits{
+
+	float: left;
+	width:10% ;
+	height: 100%;
+	margin-left: 12%;
+}
+
+.direccionales{
+	position: relative;
+	top: 500;
+	margin-top: 400px;
+	
+}
+
+.botons{
+	float: left;
+
+
+}
+
+.atras{
+	margin-left: 20%;
+	margin-right: 50%;
+}
